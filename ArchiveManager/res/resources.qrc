@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>stylesheet/default.qss</file>
+        <file>image/titlebar_settings.png</file>
+        <file>image/titlebar_user.png</file>
+        <file>database/dms_manager_db.sql</file>
+        <file>image/AM_logo.ico</file>
+        <file>image/AM_logo.png</file>
+        <file>archive_manager_ver.txt</file>
+        <file>archive_manager.rc</file>
+    </qresource>
+</RCC>

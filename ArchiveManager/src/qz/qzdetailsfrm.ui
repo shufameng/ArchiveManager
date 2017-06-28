@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QzDetailsFrm</class>
+ <widget class="QFrame" name="QzDetailsFrm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>639</width>
+    <height>477</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Frame</string>
+  </property>
+  <property name="frameShape">
+   <enum>QFrame::StyledPanel</enum>
+  </property>
+  <property name="frameShadow">
+   <enum>QFrame::Raised</enum>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="1">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>11</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="0">
+    <widget class="QCheckBox" name="checkBox_qzh">
+     <property name="text">
+      <string>*全宗号:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QComboBox" name="comboBox_qzh">
+     <property name="editable">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QCheckBox" name="checkBox_qssj">
+     <property name="text">
+      <string>起始时间:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="4">
+    <widget class="QLineEdit" name="lineEdit_pjh"/>
+   </item>
+   <item row="4" column="0">
+    <widget class="QCheckBox" name="checkBox_kfh">
+     <property name="text">
+      <string>库房号:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QLineEdit" name="lineEdit_qssj"/>
+   </item>
+   <item row="4" column="2">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>24</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="5" column="3">
+    <widget class="QCheckBox" name="checkBox_zzsj">
+     <property name="text">
+      <string>终止时间:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="4">
+    <widget class="QLineEdit" name="lineEdit_zzsj"/>
+   </item>
+   <item row="4" column="1">
+    <widget class="QLineEdit" name="lineEdit_kfh"/>
+   </item>
+   <item row="4" column="3">
+    <widget class="QCheckBox" name="checkBox_pjh">
+     <property name="text">
+      <string>排架号:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="1">
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>11</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="6" column="0">
+    <widget class="QCheckBox" name="checkBox_bz">
+     <property name="text">
+      <string>备注:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1" rowspan="2" colspan="4">
+    <widget class="QTextEdit" name="textEdit_bz"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QCheckBox" name="checkBox_qztm">
+     <property name="text">
+      <string>全宗题名:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1" rowspan="2" colspan="4">
+    <widget class="QTextEdit" name="textEdit_qztm"/>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
