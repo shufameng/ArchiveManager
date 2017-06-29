@@ -5,6 +5,7 @@
 #include "NetConfigDlg.h"
 #include "LoginThread.h"
 #include <QMessageBox>
+#include "common/globals.h"
 
 LoginDlg::LoginDlg(QWidget *parent) :
     SDialog(parent),

@@ -6,9 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>822</width>
-    <height>596</height>
+    <width>848</width>
+    <height>595</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Frame</string>
@@ -20,11 +32,18 @@
    <enum>QFrame::Raised</enum>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="1" column="4">
-    <widget class="QComboBox" name="comboBox_mlh">
+   <item row="1" column="3">
+    <widget class="QCheckBox" name="checkBox_mlh">
+     <property name="text">
+      <string>目录号:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="7">
+    <widget class="QComboBox" name="comboBox_ajh">
      <property name="minimumSize">
       <size>
-       <width>150</width>
+       <width>0</width>
        <height>0</height>
       </size>
      </property>
@@ -49,16 +68,17 @@
      </property>
     </spacer>
    </item>
-   <item row="1" column="1">
-    <widget class="QComboBox" name="comboBox_qzh">
-     <property name="minimumSize">
-      <size>
-       <width>150</width>
-       <height>0</height>
-      </size>
+   <item row="1" column="0">
+    <widget class="QCheckBox" name="checkBox_qzh">
+     <property name="text">
+      <string>全宗号:</string>
      </property>
-     <property name="editable">
-      <bool>true</bool>
+    </widget>
+   </item>
+   <item row="1" column="6">
+    <widget class="QCheckBox" name="checkBox_ajh">
+     <property name="text">
+      <string>案卷号:</string>
      </property>
     </widget>
    </item>
@@ -78,53 +98,6 @@
      </property>
     </spacer>
    </item>
-   <item row="1" column="0">
-    <widget class="QCheckBox" name="checkBox_qzh">
-     <property name="text">
-      <string>全宗号:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="3">
-    <widget class="QCheckBox" name="checkBox_mlh">
-     <property name="text">
-      <string>目录号:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="4">
-    <spacer name="verticalSpacer">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>3</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="1" column="7">
-    <widget class="QComboBox" name="comboBox_ajh">
-     <property name="minimumSize">
-      <size>
-       <width>150</width>
-       <height>0</height>
-      </size>
-     </property>
-     <property name="editable">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="0">
-    <widget class="QCheckBox" name="checkBox_ajtm">
-     <property name="text">
-      <string>案卷题名:</string>
-     </property>
-    </widget>
-   </item>
    <item row="4" column="0">
     <widget class="QCheckBox" name="checkBox_type">
      <property name="text">
@@ -132,140 +105,18 @@
      </property>
     </widget>
    </item>
-   <item row="4" column="3">
-    <widget class="QCheckBox" name="checkBox_bgqx">
-     <property name="text">
-      <string>保管期限:</string>
+   <item row="1" column="4">
+    <widget class="QComboBox" name="comboBox_mlh">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
      </property>
-    </widget>
-   </item>
-   <item row="4" column="4">
-    <widget class="QComboBox" name="comboBox_bgqx">
      <property name="editable">
       <bool>true</bool>
      </property>
     </widget>
-   </item>
-   <item row="5" column="1">
-    <widget class="QLineEdit" name="lineEdit_qssj"/>
-   </item>
-   <item row="5" column="3">
-    <widget class="QCheckBox" name="checkBox_zzsj">
-     <property name="text">
-      <string>终止时间:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="7" column="0">
-    <widget class="QCheckBox" name="checkBox_kfh">
-     <property name="text">
-      <string>库房号:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="7">
-    <widget class="QLineEdit" name="lineEdit_flh"/>
-   </item>
-   <item row="1" column="6">
-    <widget class="QCheckBox" name="checkBox_ajh">
-     <property name="text">
-      <string>案卷号:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="5" colspan="2">
-    <widget class="QCheckBox" name="checkBox_flh">
-     <property name="text">
-      <string>分类号:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="3">
-    <widget class="QCheckBox" name="checkBox_gdh">
-     <property name="text">
-      <string>归档号:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="7" column="1">
-    <widget class="QLineEdit" name="lineEdit_kfh"/>
-   </item>
-   <item row="7" column="3">
-    <widget class="QCheckBox" name="checkBox_pjh">
-     <property name="text">
-      <string>排架号:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="7" column="5" colspan="2">
-    <widget class="QCheckBox" name="checkBox_dagdm">
-     <property name="text">
-      <string>档案馆代码:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="5" colspan="2">
-    <widget class="QCheckBox" name="checkBox_jglb">
-     <property name="text">
-      <string>机构类别:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="7" column="4">
-    <widget class="QLineEdit" name="lineEdit_pjh"/>
-   </item>
-   <item row="6" column="1">
-    <widget class="QLineEdit" name="lineEdit_zrz"/>
-   </item>
-   <item row="7" column="7">
-    <widget class="QLineEdit" name="lineEdit_dagdm"/>
-   </item>
-   <item row="2" column="1" rowspan="2" colspan="7">
-    <widget class="QTextEdit" name="textEdit_ajtm"/>
-   </item>
-   <item row="5" column="5" colspan="2">
-    <widget class="QCheckBox" name="checkBox_nd">
-     <property name="text">
-      <string>年度:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="0">
-    <widget class="QCheckBox" name="checkBox_zrz">
-     <property name="text">
-      <string>责任者:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="8" column="0">
-    <widget class="QCheckBox" name="checkBox_ys">
-     <property name="text">
-      <string>页数:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="8" column="3">
-    <widget class="QCheckBox" name="checkBox_jgwt">
-     <property name="text">
-      <string>机构问题:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="5" column="4">
-    <widget class="QLineEdit" name="lineEdit_zzsj"/>
-   </item>
-   <item row="8" column="1">
-    <widget class="QLineEdit" name="lineEdit_ys"/>
-   </item>
-   <item row="5" column="0">
-    <widget class="QCheckBox" name="checkBox_qssj">
-     <property name="text">
-      <string>起始时间:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="8" column="4">
-    <widget class="QLineEdit" name="lineEdit_jgwt"/>
    </item>
    <item row="4" column="1">
     <widget class="QComboBox" name="comboBox_type">
@@ -286,8 +137,55 @@
      </item>
     </widget>
    </item>
-   <item row="6" column="4">
-    <widget class="QLineEdit" name="lineEdit_gdh"/>
+   <item row="1" column="1">
+    <widget class="QComboBox" name="comboBox_qzh">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="editable">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="4">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>3</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="4" column="3">
+    <widget class="QCheckBox" name="checkBox_bgqx">
+     <property name="text">
+      <string>保管期限:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="4">
+    <widget class="QComboBox" name="comboBox_bgqx">
+     <property name="editable">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="QLineEdit" name="lineEdit_kfh"/>
+   </item>
+   <item row="6" column="3">
+    <widget class="QCheckBox" name="checkBox_gdh">
+     <property name="text">
+      <string>归档号:</string>
+     </property>
+    </widget>
    </item>
    <item row="4" column="7">
     <widget class="QComboBox" name="comboBox_jglb">
@@ -296,20 +194,104 @@
      </property>
     </widget>
    </item>
-   <item row="5" column="7">
-    <widget class="QLineEdit" name="lineEdit_nd"/>
+   <item row="5" column="4">
+    <widget class="QLineEdit" name="lineEdit_zzsj"/>
    </item>
-   <item row="8" column="5" colspan="2">
-    <widget class="QCheckBox" name="checkBox_mldm">
+   <item row="7" column="6">
+    <widget class="QCheckBox" name="checkBox_dagdm">
      <property name="text">
-      <string>档案馆门类代码:</string>
+      <string>档案馆代码:</string>
      </property>
     </widget>
    </item>
-   <item row="8" column="7">
-    <widget class="QLineEdit" name="lineEdit_mldm"/>
+   <item row="6" column="6">
+    <widget class="QCheckBox" name="checkBox_flh">
+     <property name="text">
+      <string>分类号:</string>
+     </property>
+    </widget>
    </item>
-   <item row="11" column="1">
+   <item row="5" column="0">
+    <widget class="QCheckBox" name="checkBox_qssj">
+     <property name="text">
+      <string>起始时间:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QLineEdit" name="lineEdit_qssj"/>
+   </item>
+   <item row="5" column="6">
+    <widget class="QCheckBox" name="checkBox_nd">
+     <property name="text">
+      <string>年度:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="7">
+    <widget class="QLineEdit" name="lineEdit_nd"/>
+   </item>
+   <item row="6" column="4">
+    <widget class="QLineEdit" name="lineEdit_gdh"/>
+   </item>
+   <item row="7" column="4">
+    <widget class="QLineEdit" name="lineEdit_pjh"/>
+   </item>
+   <item row="4" column="6">
+    <widget class="QCheckBox" name="checkBox_jglb">
+     <property name="text">
+      <string>机构类别:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QCheckBox" name="checkBox_zrz">
+     <property name="text">
+      <string>责任者:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="7">
+    <widget class="QLineEdit" name="lineEdit_dagdm"/>
+   </item>
+   <item row="5" column="3">
+    <widget class="QCheckBox" name="checkBox_zzsj">
+     <property name="text">
+      <string>终止时间:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QLineEdit" name="lineEdit_zrz"/>
+   </item>
+   <item row="6" column="7">
+    <widget class="QLineEdit" name="lineEdit_flh"/>
+   </item>
+   <item row="7" column="3">
+    <widget class="QCheckBox" name="checkBox_pjh">
+     <property name="text">
+      <string>排架号:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QCheckBox" name="checkBox_kfh">
+     <property name="text">
+      <string>库房号:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="3">
+    <widget class="QCheckBox" name="checkBox_jgwt">
+     <property name="text">
+      <string>机构问题:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="1">
+    <widget class="QLineEdit" name="lineEdit_ys"/>
+   </item>
+   <item row="11" column="3">
     <spacer name="verticalSpacer_2">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
@@ -322,6 +304,9 @@
      </property>
     </spacer>
    </item>
+   <item row="8" column="7">
+    <widget class="QLineEdit" name="lineEdit_mldm"/>
+   </item>
    <item row="9" column="0">
     <widget class="QCheckBox" name="checkBox_bz">
      <property name="text">
@@ -329,8 +314,35 @@
      </property>
     </widget>
    </item>
+   <item row="8" column="4">
+    <widget class="QLineEdit" name="lineEdit_jgwt"/>
+   </item>
+   <item row="8" column="0">
+    <widget class="QCheckBox" name="checkBox_ys">
+     <property name="text">
+      <string>页数:</string>
+     </property>
+    </widget>
+   </item>
    <item row="9" column="1" rowspan="2" colspan="7">
     <widget class="QTextEdit" name="textEdit_bz"/>
+   </item>
+   <item row="8" column="6">
+    <widget class="QCheckBox" name="checkBox_mldm">
+     <property name="text">
+      <string>档案馆门类代码:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QCheckBox" name="checkBox_ajtm">
+     <property name="text">
+      <string>案卷题名:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1" rowspan="2" colspan="7">
+    <widget class="QTextEdit" name="textEdit_ajtm"/>
    </item>
   </layout>
  </widget>

@@ -1,4 +1,4 @@
-#include "ClientSocket.h"
+﻿#include "ClientSocket.h"
 #include <QDebug>
 #include "IniLoader.h"
 

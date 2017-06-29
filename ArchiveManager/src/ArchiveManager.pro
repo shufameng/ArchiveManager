@@ -44,7 +44,13 @@ FORMS += \
     gdwj/searchgdwjfrm.ui \
     jnwj/createjnwjfrm.ui \
     jnwj/searchjnwjfrm.ui \
-    log/searchlogfrm.ui
+    log/searchlogfrm.ui \
+    sys/backupfrm.ui \
+    sys/resumefrm.ui \
+    sys/importfrm.ui \
+    sys/exportfrm.ui \
+    sys/backupresumefrm.ui \
+    sys/importexportfrm.ui
 
 HEADERS += \
     MainDlg.h \
@@ -52,7 +58,6 @@ HEADERS += \
     aj/ajkeydlg.h \
     aj/ajsqltablefrm.h \
     aj/ajsqltablemodel.h \
-    common/archivecontenttreewidget.h \
     common/clientsocket.h \
     common/dbhandler.h \
     common/dbtypes.h \
@@ -92,7 +97,16 @@ HEADERS += \
     gdwj/searchgdwjfrm.h \
     jnwj/createjnwjfrm.h \
     jnwj/searchjnwjfrm.h \
-    log/searchlogfrm.h
+    log/searchlogfrm.h \
+    sys/changepasswordthread.h \
+    common/globals.h \
+    common/dbquery.h \
+    sys/backupfrm.h \
+    sys/resumefrm.h \
+    sys/importfrm.h \
+    sys/exportfrm.h \
+    sys/backupresumefrm.h \
+    sys/importexportfrm.h
 
 SOURCES += \
     main.cpp \
@@ -101,7 +115,6 @@ SOURCES += \
     aj/ajkeydlg.cpp \
     aj/ajsqltablefrm.cpp \
     aj/ajsqltablemodel.cpp \
-    common/archivecontenttreewidget.cpp \
     common/clientsocket.cpp \
     common/dbhandler.cpp \
     common/dbtypes.cpp \
@@ -141,6 +154,15 @@ SOURCES += \
     gdwj/searchgdwjfrm.cpp \
     jnwj/createjnwjfrm.cpp \
     jnwj/searchjnwjfrm.cpp \
-    log/searchlogfrm.cpp
+    log/searchlogfrm.cpp \
+    sys/changepasswordthread.cpp \
+    common/globals.cpp \
+    common/dbquery.cpp \
+    sys/backupfrm.cpp \
+    sys/resumefrm.cpp \
+    sys/importfrm.cpp \
+    sys/exportfrm.cpp \
+    sys/backupresumefrm.cpp \
+    sys/importexportfrm.cpp
 
 

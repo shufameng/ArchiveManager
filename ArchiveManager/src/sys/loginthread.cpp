@@ -1,6 +1,8 @@
 #include "LoginThread.h"
 #include "common/DbHandler.h"
 #include "common/IniLoader.h"
+#include "common/globals.h"
+#include "common/dbquery.h"
 
 LoginThread::LoginThread(const QString &loginUser, const QString &loginPasswd, QObject *parent) :
     QThread(parent),
@@ -12,13 +14,23 @@ LoginThread::LoginThread(const QString &loginUser, const QString &loginPasswd, Q
 
 void LoginThread::run()
 {
+    if (mLoginUser.isEmpty()) {
+        emit loginFailed(QString::fromLocal8Bit("用户名不能为空"));
+        return;
+    }
+
+    if (mLoginPasswd.isEmpty()) {
+        emit loginFailed(QString::fromLocal8Bit("密码不能为空"));
+        return;
+    }
+
     QSqlDatabase db = DbHandler::openDb(DbHandler::dbConnectionName());
     if (!db.isOpen()) {
         emit loginFailed(db.lastError().text());
         return;
     }
 
-    QSqlQuery q(db);
+    DbQuery q(db);
     bool ok = q.exec(QString("use %1;").arg(IniLoader::loadDefaultDbName()));
     if (!ok) {
         emit loginFailed(q.lastError().text());
@@ -40,6 +52,9 @@ void LoginThread::run()
     }
 
     if (q.next()) {
+        if (!Globals::sgCurUser)
+            Globals::sgCurUser = new DbUser;
+        q.getUser(*Globals::sgCurUser);
         emit loginSucceed();
         return;
     } else {

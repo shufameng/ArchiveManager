@@ -10,9 +10,8 @@ CreateQzFrm::CreateQzFrm(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QVBoxLayout *vLay = new QVBoxLayout(this);
-    vLay->addWidget(mFrmQzDetails = new QzDetailsFrm);
-    vLay->addStretch();
+    QVBoxLayout *vLay = new QVBoxLayout(ui->frame_details);
+    vLay->addWidget(mFrmDetails = new QzDetailsFrm);
 }
 
 CreateQzFrm::~CreateQzFrm()

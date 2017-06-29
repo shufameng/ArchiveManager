@@ -3,6 +3,7 @@
 
 #include <QtSql>
 
+
 class DbHandler
 {
 public:

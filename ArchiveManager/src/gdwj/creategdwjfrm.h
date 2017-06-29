@@ -7,6 +7,8 @@ namespace Ui {
 class CreateGdwjFrm;
 }
 
+class GdwjDetailsFrm;
+
 class CreateGdwjFrm : public QFrame
 {
     Q_OBJECT
@@ -17,6 +19,7 @@ public:
 
 private:
     Ui::CreateGdwjFrm *ui;
+    GdwjDetailsFrm *mFrmDetails;
 };
 
 #endif // CREATEGDWJFRM_H

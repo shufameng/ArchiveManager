@@ -7,6 +7,8 @@ namespace Ui {
 class CreateAjFrm;
 }
 
+class AjDetailsFrm;
+
 class CreateAjFrm : public QFrame
 {
     Q_OBJECT
@@ -17,6 +19,8 @@ public:
 
 private:
     Ui::CreateAjFrm *ui;
+
+    AjDetailsFrm *mFrmDetails;
 };
 
 #endif // CREATEAJFRM_H

@@ -72,6 +72,7 @@ private:
     QFrame                      *mFrmCreateUser;
     QFrame                      *mFrmSearchUser;
     QFrame                      *mFrmSearchLog;
+
 };
 
 #endif // MAINDLG_H

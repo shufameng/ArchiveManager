@@ -3,6 +3,7 @@
 GuideTreeWidget::GuideTreeWidget(QWidget *parent) :
     QTreeWidget(parent)
 {
+    setMinimumWidth(200);
     initItems();
 
     connect(this, SIGNAL(itemClicked(QTreeWidgetItem*,int)),

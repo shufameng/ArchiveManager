@@ -63,7 +63,7 @@ public:
 };
 //
 
-//
+// 档案馆
 class DbDag : public DbRec
 {
 public:
@@ -75,7 +75,7 @@ public:
 };
 //
 
-//
+// 全宗
 class DbQz : public DbRec
 {
 public:
@@ -90,7 +90,7 @@ public:
     Field bz;//备注
 };
 
-//
+// 目录
 class DbMl : public DbRec
 {
 public:
@@ -102,7 +102,7 @@ public:
 };
 //
 
-//
+// 案卷
 class DbAj : public DbRec
 {
 public:
@@ -131,7 +131,7 @@ public:
 };
 //
 
-//
+// 卷内文件
 class DbJnwj : public DbRec
 {
 public:
@@ -168,7 +168,7 @@ public:
 };
 //
 
-//
+// 归档文件
 class DbGdwj : public DbJnwj
 {
 public:
@@ -176,7 +176,7 @@ public:
 };
 //
 
-//
+// 电子文档
 class DbMedia : public DbGdwj
 {
 public:
@@ -191,7 +191,7 @@ public:
 };
 //
 
-//
+// 用户
 class DbUser : public DbRec
 {
 public:
@@ -204,7 +204,7 @@ public:
 };
 //
 
-//
+// 日志
 class DbLog : public DbRec
 {
 public:
@@ -217,7 +217,7 @@ public:
 };
 //
 
-//
+// 日志关键字
 class DbLogKey : public DbLog
 {
 public:
@@ -228,7 +228,7 @@ public:
 };
 //
 
-//
+// 查档记录
 class DbCdjl : public DbRec
 {
 public:
@@ -247,7 +247,7 @@ public:
 };
 //
 
-//
+// 查档记录关键字
 class DbCdjlKey : public DbCdjl
 {
 public:

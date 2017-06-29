@@ -20,7 +20,7 @@ public:
 private:
     Ui::CreateQzFrm *ui;
 
-    QzDetailsFrm *mFrmQzDetails;
+    QzDetailsFrm *mFrmDetails;
 };
 
 #endif // CREATEQZFRM_H

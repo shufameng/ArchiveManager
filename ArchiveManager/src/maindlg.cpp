@@ -1,6 +1,6 @@
 #include "MainDlg.h"
 #include <QHBoxLayout>
-#include "common/DbTypes.h"
+#include "common/dbtypes.h"
 #include <QDebug>
 #include <QSplitter>
 #include <QApplication>
@@ -22,6 +22,7 @@
 #include "gdwj/searchgdwjfrm.h"
 
 #include "sys/changepassworddlg.h"
+#include "common/globals.h"
 
 #include <QTableWidget>
 #include <QProcess>
@@ -55,7 +56,14 @@ void MainDlg::onConfigSystem()
 
 void MainDlg::onCheckMyInfo()
 {
-
+    QString log = QString("Name:%1 \t Role:%2 \n Password:%3\n Remarks:%4\n CreateTime:%5\n UpdateTime:%6\n")
+            .arg(Globals::sgCurUser->name.value.toString())
+            .arg(Globals::sgCurUser->role.value.toInt())
+            .arg(Globals::sgCurUser->password.value.toString())
+            .arg(Globals::sgCurUser->remarks.value.toString())
+            .arg(Globals::sgCurUser->createTime.value.toString())
+            .arg(Globals::sgCurUser->updateTime.value.toString());
+    qDebug() << log;
 }
 
 void MainDlg::onChangeMyPasswd()
