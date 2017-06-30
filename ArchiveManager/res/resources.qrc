@@ -8,5 +8,11 @@
         <file>image/AM_logo.png</file>
         <file>archive_manager_ver.txt</file>
         <file>archive_manager.rc</file>
+        <file>image/loading.gif</file>
+        <file>image/down_arrow.png</file>
+        <file>image/left_arrow.png</file>
+        <file>image/right_arrow.png</file>
+        <file>image/up_arrow.png</file>
+        <file>image/drop_down.png</file>
     </qresource>
 </RCC>

@@ -50,7 +50,10 @@ FORMS += \
     sys/importfrm.ui \
     sys/exportfrm.ui \
     sys/backupresumefrm.ui \
-    sys/importexportfrm.ui
+    sys/importexportfrm.ui \
+    user/createuserfrm.ui \
+    user/searchuserfrm.ui \
+    user/userdetailsfrm.ui
 
 HEADERS += \
     MainDlg.h \
@@ -106,7 +109,11 @@ HEADERS += \
     sys/importfrm.h \
     sys/exportfrm.h \
     sys/backupresumefrm.h \
-    sys/importexportfrm.h
+    sys/importexportfrm.h \
+    user/createuserfrm.h \
+    user/searchuserfrm.h \
+    user/userdetailsfrm.h \
+    common/amdefs.h
 
 SOURCES += \
     main.cpp \
@@ -163,6 +170,9 @@ SOURCES += \
     sys/importfrm.cpp \
     sys/exportfrm.cpp \
     sys/backupresumefrm.cpp \
-    sys/importexportfrm.cpp
+    sys/importexportfrm.cpp \
+    user/createuserfrm.cpp \
+    user/searchuserfrm.cpp \
+    user/userdetailsfrm.cpp
 
 

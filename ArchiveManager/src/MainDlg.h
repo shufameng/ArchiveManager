@@ -22,6 +22,13 @@ class CreateJnwjFrm;
 class SearchJnwjFrm;
 class CreateGdwjFrm;
 class SearchGdwjFrm;
+class CreateUserFrm;
+class SearchUserFrm;
+class SearchLogFrm;
+class ImportFrm;
+class ExportFrm;
+class BackupFrm;
+class ResumeFrm;
 
 class MainDlg : public SDialog
 {
@@ -65,13 +72,13 @@ private:
     SearchJnwjFrm           *mFrmSearchJnwj;
     CreateGdwjFrm           *mFrmCreateGdwj;
     SearchGdwjFrm           *mFrmSearchGdwj;
-    QFrame                      *mFrmImport;
-    QFrame                      *mFrmExport;
-    QFrame                      *mFrmBackUp;
-    QFrame                      *mFrmResume;
-    QFrame                      *mFrmCreateUser;
-    QFrame                      *mFrmSearchUser;
-    QFrame                      *mFrmSearchLog;
+    ImportFrm                      *mFrmImport;
+    ExportFrm                      *mFrmExport;
+    BackupFrm                      *mFrmBackUp;
+    ResumeFrm                      *mFrmResume;
+    CreateUserFrm          *mFrmCreateUser;
+    SearchUserFrm          *mFrmSearchUser;
+    SearchLogFrm          *mFrmSearchLog;
 
 };
 

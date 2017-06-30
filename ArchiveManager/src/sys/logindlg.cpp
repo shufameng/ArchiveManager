@@ -6,6 +6,7 @@
 #include "LoginThread.h"
 #include <QMessageBox>
 #include "common/globals.h"
+#include <QTimer>
 
 LoginDlg::LoginDlg(QWidget *parent) :
     SDialog(parent),
@@ -50,7 +51,7 @@ LoginDlg::~LoginDlg()
     delete ui;
 }
 
-void LoginDlg::setLoginStatus(const QString &status)
+void LoginDlg::setStatus(const QString &status)
 {
     ui->textEdit_status->setText(status);
 }
@@ -123,13 +124,13 @@ void LoginDlg::onLoginSucceed()
 void LoginDlg::onLoginFailed(const QString &error)
 {
     setToStatusPage();
-    setLoginStatus(QString::fromLocal8Bit("µÇÂ¼Ê§°Ü:\n") + error);
+    setStatus(QString::fromLocal8Bit("µÇÂ¼Ê§°Ü:\n") + error);
 }
 
 void LoginDlg::onLoginThreadStarted()
 {
     setToStatusPage();
-    setLoginStatus(QString::fromLocal8Bit("ÕýÔÚµÇÂ½..."));
+    setStatus(QString::fromLocal8Bit("ÕýÔÚµÇÂ½..."));
     ui->pushButton_goBack->hide();
 }
 
@@ -147,3 +148,4 @@ void LoginDlg::on_pushButton_goBack_clicked()
 {
     ui->stackedWidget->setCurrentWidget(ui->page_login);
 }
+

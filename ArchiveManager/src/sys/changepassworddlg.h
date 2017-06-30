@@ -15,6 +15,11 @@ public:
     ~ChangePasswordDlg();
 private slots:
     void onBtnYes();
+    void onBtnGoBack();
+
+    void onChangePasswdResult(bool succeed, const QString &description);
+    void onChangePasswdThreadStarted();
+    void onChangePasswdThreadFinished();
 
 private:
     Ui::ChangePasswordFrm *ui;

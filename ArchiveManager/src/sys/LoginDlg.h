@@ -35,7 +35,7 @@ public:
     explicit LoginDlg(QWidget *parent = 0);
     ~LoginDlg();
 
-    void setLoginStatus(const QString &status);
+    void setStatus(const QString &status);
     void setToLoginPage();
     void setToStatusPage();
 

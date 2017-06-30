@@ -1,17 +1,18 @@
 #include "MainDlg.h"
 #include <QHBoxLayout>
-#include "common/dbtypes.h"
 #include <QDebug>
 #include <QSplitter>
 #include <QApplication>
+#include <QTableWidget>
+#include <QProcess>
 
+#include "common/dbtypes.h"
 #include "log/LogSqlTableFrm.h"
 #include "qz/QzSqlTableFrm.h"
 #include "aj/AjSqlTableFrm.h"
 #include "jnwj/JnwjSqlTableFrm.h"
 #include "gdwj/GdwjSqlTableFrm.h"
 #include "common/guidetreewidget.h"
-
 #include "qz/createqzfrm.h"
 #include "qz/searchqzfrm.h"
 #include "aj/createajfrm.h"
@@ -20,12 +21,16 @@
 #include "jnwj/searchjnwjfrm.h"
 #include "gdwj/creategdwjfrm.h"
 #include "gdwj/searchgdwjfrm.h"
-
+#include "log/searchlogfrm.h"
+#include "sys/importfrm.h"
+#include "sys/exportfrm.h"
+#include "sys/backupfrm.h"
+#include "sys/resumefrm.h"
+#include "user/createuserfrm.h"
+#include "user/searchuserfrm.h"
 #include "sys/changepassworddlg.h"
 #include "common/globals.h"
 
-#include <QTableWidget>
-#include <QProcess>
 
 
 MainDlg::MainDlg(QWidget *parent) :
@@ -180,13 +185,13 @@ void MainDlg::setupLayout()
     mSWMain->addWidget(mFrmSearchJnwj = new SearchJnwjFrm);
     mSWMain->addWidget(mFrmCreateGdwj = new CreateGdwjFrm);
     mSWMain->addWidget(mFrmSearchGdwj = new SearchGdwjFrm);
-    mSWMain->addWidget(mFrmImport = new QFrame);
-    mSWMain->addWidget(mFrmExport = new QFrame);
-    mSWMain->addWidget(mFrmBackUp = new QFrame);
-    mSWMain->addWidget(mFrmResume = new QFrame);
-    mSWMain->addWidget(mFrmCreateUser = new QFrame);
-    mSWMain->addWidget(mFrmSearchUser = new QFrame);
-    mSWMain->addWidget(mFrmSearchLog = new QFrame);
+    mSWMain->addWidget(mFrmImport = new ImportFrm);
+    mSWMain->addWidget(mFrmExport = new ExportFrm);
+    mSWMain->addWidget(mFrmBackUp = new BackupFrm);
+    mSWMain->addWidget(mFrmResume = new ResumeFrm);
+    mSWMain->addWidget(mFrmCreateUser = new CreateUserFrm);
+    mSWMain->addWidget(mFrmSearchUser = new SearchUserFrm);
+    mSWMain->addWidget(mFrmSearchLog = new SearchLogFrm);
 
     connect(mTWGuide, SIGNAL(funcRequest(int)), this, SLOT(onFuncRequest(int)));
 }

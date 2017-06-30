@@ -134,7 +134,7 @@ QComboBox::drop-down {
     border-left: 1px solid #d3d3d3;
 }
 QComboBox::down-arrow {
-    image: url(:/image/combobox_arrow_down.png);
+    image: url(:/image/drop_down.png);
 }
 QComboBox::hover {
     border: 1px solid #a0a0a0;
@@ -178,6 +178,65 @@ QAbstractScrollArea::focus {
 
 QProgressBar {
 
+}
+
+QTreeView {
+        background-color: white;
+        outline: 0px;
+}
+QTreeView::item {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    min-height: 20px;
+}
+QTreeView::item:!has-children {
+    border: none;
+}
+QTreeView::item:has-children {
+    border: none;
+    border-top: 1px solid #a0a0a0;
+    border-bottom: 1px solid #a0a0a0;
+    min-height: 20px;
+}
+QTreeView::branch {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+QTreeView::branch:!has-children {
+    border: none;
+}
+QTreeView::branch:has-children {
+    border: 1px solid #a0a0a0;
+    border-right: none;
+}
+QTreeView::branch:has-children {
+    margin-left: -1px;
+}
+QTreeView::item:hover {
+    background-color: #698FC7;
+}
+QTreeView::item:!has-children:selected {
+    background-color: #3665b3;
+    color: white;
+}
+QTreeView::item:has-children:selected {
+    color: black;
+}
+QTreeView::item:has-children {
+        background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,
+                                                                stop:0 #efefef,
+                                                                stop:1 #e5e5e5);
+}
+QTreeView::branch:has-children {
+        background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1,
+                                                                stop:0 #efefef,
+                                                                stop:1 #e5e5e5);
+}
+QTreeView::branch:has-children:open {
+        image: url(:/image/down_arrow.png);
+}
+QTreeView::branch:has-children:closed {
+        image: url(:/image/right_arrow.png);
 }
 
 
