@@ -17,6 +17,9 @@ public:
     explicit CreateQzFrm(QWidget *parent = 0);
     ~CreateQzFrm();
 
+protected slots:
+    void onButtonCreate();
+
 private:
     Ui::CreateQzFrm *ui;
 

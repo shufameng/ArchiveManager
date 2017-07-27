@@ -77,12 +77,11 @@ void GuideTreeWidget::initItems()
     createFuncItem(itemBackupResume, ID_BACKUP, QString::fromLocal8Bit("备份"));
     createFuncItem(itemBackupResume, ID_RESUME, QString::fromLocal8Bit("还原"));
 
-    QTreeWidgetItem *itemSystemUser = createTopLevelItem(QString::fromLocal8Bit("系统用户"));
-    createFuncItem(itemSystemUser, ID_CREATE_USER, QString::fromLocal8Bit("新建用户"));
-    createFuncItem(itemSystemUser, ID_SEARCH_USER, QString::fromLocal8Bit("检索用户"));
-
-    QTreeWidgetItem *itemSystemLog = createTopLevelItem(QString::fromLocal8Bit("系统日志"));
-    createFuncItem(itemSystemLog, ID_SEARCH_LOG, QString::fromLocal8Bit("检索日志"));
+    QTreeWidgetItem *itemSysFunc = createTopLevelItem(QString::fromLocal8Bit("系统功能"));
+    createFuncItem(itemSysFunc, ID_CREATE_USER, QString::fromLocal8Bit("新建用户"));
+    createFuncItem(itemSysFunc, ID_SEARCH_USER, QString::fromLocal8Bit("检索用户"));
+    createFuncItem(itemSysFunc, ID_SEARCH_LOG, QString::fromLocal8Bit("检索日志"));
+    createFuncItem(itemSysFunc, ID_TOOLS, QString::fromLocal8Bit("实用工具"));
 }
 
 

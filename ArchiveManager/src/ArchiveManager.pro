@@ -53,7 +53,8 @@ FORMS += \
     sys/importexportfrm.ui \
     user/createuserfrm.ui \
     user/searchuserfrm.ui \
-    user/userdetailsfrm.ui
+    user/userdetailsfrm.ui \
+    tools/toolsfrm.ui
 
 HEADERS += \
     MainDlg.h \
@@ -113,7 +114,8 @@ HEADERS += \
     user/createuserfrm.h \
     user/searchuserfrm.h \
     user/userdetailsfrm.h \
-    common/amdefs.h
+    common/amdefs.h \
+    tools/toolsfrm.h
 
 SOURCES += \
     main.cpp \
@@ -173,6 +175,7 @@ SOURCES += \
     sys/importexportfrm.cpp \
     user/createuserfrm.cpp \
     user/searchuserfrm.cpp \
-    user/userdetailsfrm.cpp
+    user/userdetailsfrm.cpp \
+    tools/toolsfrm.cpp
 
 

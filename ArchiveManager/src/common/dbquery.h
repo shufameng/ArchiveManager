@@ -16,6 +16,17 @@ public:
     bool useDefaultDb();
     bool useCurrentDb();
 
+    // insert
+    bool insertQZ(const DbQz &info);
+    bool insertAJ(const DbAj &info);
+    bool insertJnwj(const DbJnwj &info);
+    bool insertGdwj(const DbGdwj &info);
+    bool insertMedia(const DbMedia &info);
+    bool insertDAG(const DbDag &info);
+    bool insertUser(const DbUser &info);
+    bool insertLog(const DbLog &info);
+    bool insertCDJL(const DbCdjl &info);
+
     // select
     bool selectDAG(const QString &dbName, DbDag &info);     /* 根据档案馆的数据库名称检索档案馆信息 */
     bool selectMJ(QStringList &items);                                    /* 检索获得所有密级 */

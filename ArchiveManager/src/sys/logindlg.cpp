@@ -43,7 +43,7 @@ LoginDlg::LoginDlg(QWidget *parent) :
     connect(ui->toolButton_configNetwork, SIGNAL(clicked()), this, SLOT(on_toolButton_configNetwork_clicked()));
 
     // test
-    on_pushButton_login_clicked();
+    //on_pushButton_login_clicked();
 }
 
 LoginDlg::~LoginDlg()

@@ -26,6 +26,7 @@ public:
         ID_RESUME,
         ID_IMPORT,
         ID_EXPORT,
+        ID_TOOLS,
 
         ID_UNKNOWN_FUNC
     }FuncID;

@@ -51,6 +51,217 @@ bool DbQuery::useCurrentDb()
     return exec2(QString("use %1;").arg(IniLoader::loadCurrentDbName()));
 }
 
+bool DbQuery::insertQZ(const DbQz &info)
+{
+    if (!useCurrentDb())
+        return false;
+    if (!prepare2("insert into archive_fonds(qzh,qztm,kfh,pjh,qssj,zzsj,bz,create_time) values(?,?,?,?,?,?,?,?);"))
+        return false;
+    int i = 0;
+    bindValue(i++, info.qzh.value);
+    bindValue(i++, info.qztm.value);
+    bindValue(i++, info.kfh.value);
+    bindValue(i++, info.pjh.value);
+    bindValue(i++, info.qssj.value);
+    bindValue(i++, info.zzsj.value);
+    bindValue(i++, info.bz.value);
+    bindValue(i++, QDateTime::currentDateTime());
+    if (!exec2())
+        return false;
+    return true;
+}
+
+bool DbQuery::insertAJ(const DbAj &info)
+{
+    if (!useCurrentDb())
+        return false;
+    if (!prepare2("insert into archive_box"
+                          "(type,qzh,mlh,ajh,tm,bgqx,jglb,zrz,nd,ys,gdh,flh,qssj,zzsj,dagdm,kfh,pjh,bz,jgwt,mldm,create_time) "
+                          "values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);"))
+        return false;
+    int i = 0;
+    bindValue(i++, info.type.value);
+    bindValue(i++, info.qzh.value);
+    bindValue(i++, info.mlh.value);
+    bindValue(i++, info.ajh.value);
+    bindValue(i++, info.tm.value);
+    bindValue(i++, info.bgqx.value);
+    bindValue(i++, info.jglb.value);
+    bindValue(i++, info.zrz.value);
+    bindValue(i++, info.nd.value);
+    bindValue(i++, info.ys.value);
+    bindValue(i++, info.gdh.value);
+    bindValue(i++, info.flh.value);
+    bindValue(i++, info.qssj.value);
+    bindValue(i++, info.zzsj.value);
+    bindValue(i++, info.dagdm.value);
+    bindValue(i++, info.kfh.value);
+    bindValue(i++, info.pjh.value);
+    bindValue(i++, info.bz.value);
+    bindValue(i++, info.jgwt.value);
+    bindValue(i++, info.mldm.value);
+    bindValue(i++, QDateTime::currentDateTime());
+    if (!exec2())
+        return false;
+    return true;
+}
+
+bool DbQuery::insertJnwj(const DbJnwj &info)
+{
+    if (!useCurrentDb())
+        return false;
+    if (!prepare2("insert into archive_book"
+                          "(type,qzh,mlh,ajh,jh,tm,zrz,bgqx,jglb,mj,wh,nd,gdh,ztlx,flh,ztc,sj,dh,wsh,yh,zs,kfh,pjh,bz,jgwt,mldm,create_time) "
+                          "values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);"))
+        return false;
+    int i = 0;
+    bindValue(i++, info.type.value);
+    bindValue(i++, info.qzh.value);
+    bindValue(i++, info.mlh.value);
+    bindValue(i++, info.ajh.value);
+    bindValue(i++, info.jh.value);
+    bindValue(i++, info.tm.value);
+    bindValue(i++, info.zrz.value);
+    bindValue(i++, info.bgqx.value);
+    bindValue(i++, info.jglb.value);
+    bindValue(i++, info.mj.value);
+    bindValue(i++, info.wh.value);
+    bindValue(i++, info.nd.value);
+    bindValue(i++, info.gdh.value);
+    bindValue(i++, info.ztlx.value);
+    bindValue(i++, info.flh.value);
+    bindValue(i++, info.ztc.value);
+    bindValue(i++, info.sj.value);
+    bindValue(i++, info.dh.value);
+    bindValue(i++, info.wsh.value);
+    bindValue(i++, info.yh.value);
+    bindValue(i++, info.zs.value);
+    bindValue(i++, info.kfh.value);
+    bindValue(i++, info.pjh.value);
+    bindValue(i++, info.bz.value);
+    bindValue(i++, info.jgwt.value);
+    bindValue(i++, info.mldm.value);
+    bindValue(i++, QDateTime::currentDateTime());
+    if (!exec2())
+        return false;
+    return true;
+}
+
+bool DbQuery::insertGdwj(const DbGdwj &info)
+{
+    if (!useCurrentDb())
+        return false;
+    if (!prepare2("insert into archive_book"
+                          "(type,qzh,mlh,ajh,jh,tm,zrz,bgqx,jglb,mj,wh,nd,gdh,ztlx,flh,ztc,sj,dh,wsh,yh,zs,kfh,pjh,bz,jgwt,mldm,create_time) "
+                          "values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);"))
+        return false;
+    int i = 0;
+    bindValue(i++, info.type.value);
+    bindValue(i++, info.qzh.value);
+    bindValue(i++, info.mlh.value);
+    bindValue(i++, info.ajh.value);
+    bindValue(i++, info.jh.value);
+    bindValue(i++, info.tm.value);
+    bindValue(i++, info.zrz.value);
+    bindValue(i++, info.bgqx.value);
+    bindValue(i++, info.jglb.value);
+    bindValue(i++, info.mj.value);
+    bindValue(i++, info.wh.value);
+    bindValue(i++, info.nd.value);
+    bindValue(i++, info.gdh.value);
+    bindValue(i++, info.ztlx.value);
+    bindValue(i++, info.flh.value);
+    bindValue(i++, info.ztc.value);
+    bindValue(i++, info.sj.value);
+    bindValue(i++, info.dh.value);
+    bindValue(i++, info.wsh.value);
+    bindValue(i++, info.yh.value);
+    bindValue(i++, info.zs.value);
+    bindValue(i++, info.kfh.value);
+    bindValue(i++, info.pjh.value);
+    bindValue(i++, info.bz.value);
+    bindValue(i++, info.jgwt.value);
+    bindValue(i++, info.mldm.value);
+    bindValue(i++, QDateTime::currentDateTime());
+    if (!exec2())
+        return false;
+    return true;
+}
+
+bool DbQuery::insertMedia(const DbMedia &info)
+{
+    if (!useCurrentDb())
+        return false;
+    if (!prepare2("insert into archive_media(qzh,mlh,ajh,jh,wjm,dalx) values(?,?,?,?,?,?);"))
+        return false;
+    int i = 0;
+    bindValue(i++, info.qzh.value);
+    bindValue(i++, info.mlh.value);
+    bindValue(i++, info.ajh.value);
+    bindValue(i++, info.jh.value);
+    bindValue(i++, info.fileName.value);
+    bindValue(i++, info.type.value);
+    if (!exec2())
+        return false;
+    return true;
+}
+
+bool DbQuery::insertDAG(const DbDag &info)
+{
+    return true;
+}
+
+bool DbQuery::insertUser(const DbUser &info)
+{
+    return true;
+}
+
+bool DbQuery::insertLog(const DbLog &info)
+{
+    if (!useDefaultDb())
+        return false;
+
+    if (!prepare2("insert into log(user_id,library_id,operation) values(?,?,?);"))
+        return false;
+    bindValue(0, info.user.id.value);
+    bindValue(1, info.dag.id.value);
+    bindValue(2, info.operation.value);
+    if (!exec2())
+        return false;
+
+    return true;
+}
+
+bool DbQuery::insertCDJL(const DbCdjl &info)
+{
+    if (!useCurrentDb())
+        return false;
+
+    if (!prepare2("insert into archive_borrow"
+                          "(qzh,mlh,ajh,jh,borrower,id_card_num,approver,borrow_reason,return_sign,borrow_time,planned_return_time,actually_return_time,is_returned,remarks) "
+                          "values(?,?,?,?,?,?,?,?,?,?,?,?,?,?);"))
+        return false;
+    int i = 0;
+    bindValue(i++, info.qzh.value);
+    bindValue(i++, info.mlh.value);
+    bindValue(i++, info.ajh.value);
+    bindValue(i++, info.jh.value);
+    bindValue(i++, info.customer.value);
+    bindValue(i++, info.idCardNum.value);
+    bindValue(i++, info.operatePerson.value);
+    bindValue(i++, info.operateReason.value);
+    bindValue(i++, QVariant());
+    bindValue(i++, QVariant());
+    bindValue(i++, QVariant());
+    bindValue(i++, QVariant());
+    bindValue(i++, QVariant());
+    bindValue(i++, info.remarks.value);
+    if (!exec2())
+        return false;
+
+    return true;
+}
+
 bool DbQuery::selectDAG(const QString &dbName, DbDag &info)
 {
     QString cmd = QString("select * from %1 where %2 = '%3';")
